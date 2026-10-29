@@ -1,7 +1,7 @@
 -- Run once in Supabase Dashboard > SQL Editor.
 create table if not exists public.items (
   id text primary key, name text not null, price integer not null check(price > 0),
-  stock integer not null default 0 check(stock >= 0), emoji text not null default '🍪'
+  stock integer not null default 0 check(stock >= 0), emoji text not null default '🍪', image_url text
 );
 create table if not exists public.orders (
   id bigint generated always as identity primary key, created_at timestamptz not null default now(),
@@ -9,7 +9,7 @@ create table if not exists public.orders (
   notes text not null default '', lines jsonb not null, total integer not null check(total >= 0),
   status text not null default 'New' check(status in ('New','Preparing','Ready','Delivered','Cancelled'))
 );
-alter table public.items enable row level security;
+alter table public.items add column if not exists image_url text;\nalter table public.items enable row level security;
 alter table public.orders enable row level security;
 create policy "Anyone can view menu" on public.items for select using (true);
 create policy "Signed-in owner manages menu" on public.items for all to authenticated using (true) with check (true);
