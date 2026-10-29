@@ -8,7 +8,7 @@ This version uses static hosting + Supabase's free database. WhatsApp remains a 
 3. In **Authentication → Providers / Sign In**, turn off public email sign-ups. Create your own owner account using the dashboard's user management (or enable sign-up temporarily, create your account, then turn sign-up off). Never share the owner login.
 4. In **Project Settings → API**, copy the Project URL and `anon`/publishable key. These are intended for a browser app; never use the `service_role`/secret key in this site.
 
-## 2. Configure and host
+## Add item photos\n1. In Supabase **Storage**, create a public bucket named `item-photos`. Public buckets allow the photos to load on the public menu; do not upload personal or private images there.\n2. Upload each product photo in the Supabase Storage dashboard and copy its public URL (the public URL option is available from the file menu).\n3. Sign in to the Crumb owner dashboard, paste that URL into the item's **Photo URL** field, and change focus or press Enter/Tab to save. The menu displays the photo; if a URL is broken, the emoji appears instead.\n\n## 2. Configure and host
 1. Open `index.html` and find `SUPABASE_URL` and `SUPABASE_ANON_KEY` near the start of its script. Replace the placeholders with your Project URL and anon/publishable key.
 2. Create a **public** GitHub repository, upload `index.html`, and enable **Settings → Pages → Deploy from a branch**, choosing `main` and `/ (root)`. GitHub Pages gives you a free `github.io` link. Anyone with that link can place orders and see menu/stock.
 3. Open the deployed link once and test with a small order. Use **Owner login** for your Supabase email/password.
