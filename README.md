@@ -1,4 +1,4 @@
-# Hostel Shop — Quick Commerce for One Hostel
+# Hostel Bites — Quick Commerce for One Hostel
 
 Next.js (static export) + Supabase + Azure Static Web Apps. Solo-operated: you deliver yourself, guest checkout, no maps/riders.
 

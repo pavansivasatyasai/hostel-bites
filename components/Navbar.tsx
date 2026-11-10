@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-10 bg-white border-b">
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-green-600">Hostel Shop</Link>
+        <Link href="/" className="text-xl font-bold text-green-600">Hostel Bites</Link>
         <nav className="flex items-center gap-4 text-sm">
           <Link href="/cart" className="relative">
             Cart

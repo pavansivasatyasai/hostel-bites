@@ -1,7 +1,7 @@
 import './globals.css';
 import Navbar from '@/components/Navbar';
 
-export const metadata = { title: 'Hostel Shop', description: 'Hostel grocery delivery' };
+export const metadata = { title: 'Hostel Bites', description: 'Hostel grocery delivery' };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

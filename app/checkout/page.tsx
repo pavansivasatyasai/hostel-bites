@@ -39,7 +39,7 @@ export default function Checkout() {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: order.amount,
         currency: order.currency,
-        name: 'Hostel Shop',
+        name: 'Hostel Bites',
         description: 'Grocery delivery',
         order_id: order.id,
         handler: async (response: any) => {
